@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Yur Vibe Today?</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <p class="eyebrow">✿ PETAL — DAILY RITUALS ✿</p>
+        <h1>What's Your Vibe Today?</h1>
+        <p class='subtitle'>
+            A little recommendation for whatever kind of day you're having.
+        </p>
+
+        <section class='quiz'>
+            <h2>01 / How are you feeling?</h2>
+            <div class="options">
+                <button class="mood" data-mood="happy">
+                    ♡ Happy
+                </button>
+                <button class="mood" data-mood="tired">
+                    ☾ Tired
+                </button>
+                <button class="mood" data-mood="stressed">
+                    ✿ Stressed
+                </button>
+            </div>
+
+            <h2>02 / What's the plan?</h2>
+            <div class="options">
+                <button class="plan" data-plan="out">
+                    Going Out
+                </button>
+                <button class="plan" data-plan="in">
+                    Staying In 
+                </button>
+            </div>
+
+            <button id="submit">Find My Vibe →</button>
+        </section>
+
+        <section id="result" class="result" hidden>
+            <p class="eyebrow">YOUR RECOMMENDATION</p>
+            <h2 id="result-title"></h2>
+            <p id="result-description"></p>
+            <button id="reset">Start Over</button>
+        </section>
+
+    </main>
+</body>
+
+</html>
+ß

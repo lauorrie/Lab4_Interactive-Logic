@@ -1,0 +1,237 @@
+
+/* PETAL — DAILY RITUALS */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+/* General styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #ffffff;
+    color: #343039;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 680px;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+/* Small editorial headings */
+.eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #b78495;
+    margin-bottom: 22px;
+}
+
+/* Main title */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 6vw, 58px);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin: 0 0 20px;
+    color: #343039;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #8c8589;
+    max-width: 420px;
+    margin: 0 auto 55px;
+}
+
+/* Quiz section */
+.quiz {
+    text-align: center;
+    padding: 38px 40px;
+    border: 1px solid #f0e5e9;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 12px 45px rgba(180, 140, 155, 0.06);
+}
+
+/* Question headings */
+.quiz h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #343039;
+    margin: 0 0 20px;
+}
+
+.quiz h2:not(:first-child) {
+    margin-top: 38px;
+}
+
+/* Option layout */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+/* General buttons */
+button {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Mood and plan buttons */
+.mood,
+.plan {
+    background: #ffffff;
+    color: #655c61;
+    border: 1px solid #e9dfe3;
+    border-radius: 100px;
+    padding: 13px 25px;
+}
+
+/* Hover effect */
+.mood:hover,
+.plan:hover {
+    background: #fcf4f6;
+    border-color: #d9b0bf;
+    transform: translateY(-2px);
+}
+
+/* Selected option */
+.mood.selected,
+.plan.selected {
+    background: #f8e9ed;
+    color: #9d6177;
+    border-color: #d9aabb;
+    box-shadow: 0 3px 12px rgba(183, 132, 149, 0.10);
+}
+
+/* Submit button */
+#submit {
+    width: 100%;
+    margin-top: 45px;
+    padding: 17px 25px;
+    background: #b78495;
+    color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Submit hover */
+#submit:hover {
+    background: #a36e81;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(183, 132, 149, 0.20);
+}
+
+/* Result card */
+.result {
+    margin-top: 30px;
+    padding: 45px 35px;
+    background: #fdf5f7;
+    border: 1px solid #f1e1e7;
+    border-radius: 20px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Result title */
+.result h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 400;
+    color: #343039;
+    margin: 15px 0;
+}
+
+/* Result description */
+#result-description {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #80767c;
+    max-width: 430px;
+    margin: 0 auto;
+}
+
+/* Reset button */
+#reset {
+    margin-top: 30px;
+    padding: 12px 28px;
+    background: transparent;
+    color: #a36e81;
+    border: 1px solid #d9b0bf;
+    border-radius: 100px;
+}
+
+#reset:hover {
+    background: #f8e9ed;
+}
+
+/* Keep result hidden until submitted */
+[hidden] {
+    display: none !important;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+        padding: 45px 12px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .quiz {
+        padding: 30px 22px;
+    }
+
+    .mood,
+    .plan {
+        padding: 12px 19px;
+    }
+
+    .result {
+        padding: 35px 22px;
+    }
+
+    .result h2 {
+        font-size: 28px;
+    }
+}
